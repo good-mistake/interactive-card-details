@@ -1,0 +1,279 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("./images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: 35%;
+  font-family: "Space Grotesk", sans-serif;
+}
+main {
+  width: 100%;
+  display: flex;
+}
+
+.left img {
+  width: 100%;
+}
+.left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.backCard {
+  background: url("./images/bg-card-back.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  width: 50%;
+  padding: 13% 4%;
+  margin: 5% 0 0 35%;
+}
+.backCard p {
+  text-align: right;
+  color: white;
+  font-size: 1.25rem;
+
+  margin-right: 0.25rem;
+}
+.container {
+  width: 100%;
+}
+
+.frontCard {
+  background: url("./images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+
+  border-radius: 10px;
+  width: 50%;
+  padding: 5% 4%;
+  margin: 12% 0 0 25%;
+}
+
+.largeCircle {
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.smallCircle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-left: 10px;
+}
+.circleContainer {
+  display: flex;
+  align-items: center;
+}
+.nameAndDateContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.cardNumber {
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20%;
+  width: 60%;
+  font-size: 16px;
+}
+input {
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  padding: 4% 2%;
+  margin-bottom: 15px;
+}
+label {
+  font-weight: bold;
+  color: #3b3141;
+  margin-bottom: 10px;
+}
+input:focus {
+  outline: none;
+}
+input::placeholder {
+  color: #d0d0d2;
+  font-size: 15px;
+}
+button {
+  padding: 3%;
+  border-radius: 10px;
+  background-color: #220930;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.monthAndYear {
+  display: flex;
+}
+
+.monthAndYear input {
+  width: 30%;
+  padding: 10px;
+  margin: 10px 5px 0 0;
+}
+.dateMonthCvc {
+  display: flex;
+}
+#cvc {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 20px 0 0;
+}
+
+#success {
+  display: none;
+  margin-top: 20%;
+
+  text-align: center;
+}
+#success h1 {
+  color: #3b3141;
+}
+#success p {
+  color: hsl(266, 11%, 63%);
+}
+#success button {
+  width: 100%;
+}
+@media (max-width: 1285px) {
+  .cardNumber {
+    font-size: 16px;
+  }
+  .backCard p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 945px) {
+  .cardNumber,
+  #showName,
+  #showYear,
+  #showMonth {
+    font-size: 12px;
+  }
+  .backCard p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    background: url("./images/bg-main-mobile.png");
+    background-position: top;
+    background-repeat: repeat-x;
+  }
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left {
+    position: relative;
+    width: 100%;
+  }
+  .right {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .frontCard {
+    width: 60%;
+    z-index: 1;
+    position: absolute;
+    top: 35%;
+    margin: 12% 0 0 15%;
+  }
+  .backCard {
+    width: 60%;
+    font-size: 14px;
+    margin: 5% 0 0 25%;
+  }
+  .backCard p {
+    margin-right: 1.75rem;
+  }
+  .cardNumber,
+  #showName,
+  #showYear,
+  #showMonth {
+    font-size: 15px;
+  }
+  .right {
+    justify-content: flex-start;
+  }
+  .dateMonthCvc {
+    align-items: flex-end;
+  }
+  #cvc,
+  #year,
+  #month {
+    padding: 15px 8px;
+  }
+  form {
+    width: 100%;
+    font-size: 18px;
+  }
+  input::placeholder {
+    font-size: 18px;
+  }
+}
+@media (max-width: 400px) {
+  .frontCard {
+    width: 80%;
+    z-index: 1;
+    position: absolute;
+    top: 40%;
+    margin: 12% 0 0 5%;
+    padding: 4%;
+  }
+  .cardNumber,
+  #showName,
+  #showYear,
+  #showMonth {
+    font-size: 14px;
+    line-height: 2rem;
+    word-wrap: break-word;
+  }
+  .backCard {
+    width: 75%;
+    padding: 15% 4%;
+    font-size: 14px;
+    margin: 5% 0 0 15%;
+  }
+  .backCard p {
+    font-size: 16px;
+  }
+  .right {
+    margin-top: 8rem;
+    justify-content: center;
+  }
+  form {
+    padding: 10px;
+  }
+}
+@media (max-width: 275px) {
+  .frontCard {
+    width: 100%;
+    margin: 0;
+    top: 85%;
+  }
+  .backCard {
+    width: 100%;
+    margin: 50% 0 0 0;
+  }
+}
